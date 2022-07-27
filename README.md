@@ -1,2 +1,16 @@
 # map-midpointing
 Code for various map projects (that I may not yet know how to complete)
+
+## Main problems 
+These are the problems that inspired these projects
+- Given n locations, what is their weighted geographic midpoint? (Accounting for the spherical earth)
+- Given n locations, what meeting point minimizes total travel time? 
+- Given n locations, what is a city/park/etc. near a mathematical ideal meeting point?
+- Given a location and a time, plot all locations on a map accessible in the given time (Drive Time Polygons)
+- Given a location and a radius, plot the corresponding curve on the globe 
+
+## Notes
+- Some of these problems can be approximated locally by rectangular coordinates, but at larger scales and/or near breaks in coordinates, must account for the shape of the earth.
+- The Drive Time Polygon problem has already been solved by [Travel Time](https://traveltime.com/blog/google-maps-drive-time-polygon-tutorial-driving-radius)
+- The midpoint problem is easily solved for n points in Euclidean space
+- Many other problems have likely already been solved elsewhere
