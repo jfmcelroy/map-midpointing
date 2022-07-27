@@ -3,11 +3,11 @@ Code for various map projects (that I may not yet know how to complete)
 
 ## Main problems 
 These are the problems that inspired these projects
-- **Midpoint** Given n locations, what is their weighted geographic midpoint? (Accounting for the spherical earth)
-- **Min Travel Time** Given n locations, what meeting point minimizes total travel time? 
-- **Practical Midpoint** Given n locations, what is a city/park/etc. near a mathematical ideal meeting point?
-- **Time Polygon** Given a location and a time, plot all locations on a map accessible in the given time (Drive Time Polygons)
-- **Distance Polygon** Given a location and a radius, plot the corresponding curve on the globe 
+- **Midpoint** - Given n locations, what is their weighted geographic midpoint? (Accounting for the spherical earth)
+- **Min Travel Time** - Given n locations, what meeting point minimizes total travel time? 
+- **Practical Midpoint** - Given n locations, what is a city/park/etc. near a mathematical ideal meeting point?
+- **Time Polygon** - Given a location and a time, plot all locations on a map accessible in the given time (Drive Time Polygons)
+- **Distance Polygon** - Given a location and a radius, plot the corresponding curve on the globe 
 
 ## Notes
 - Some of these problems can be approximated locally by rectangular coordinates, but at larger scales and/or near breaks in coordinates, must account for the shape of the earth.
