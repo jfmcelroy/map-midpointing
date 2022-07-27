@@ -1,0 +1,44 @@
+<body>
+        <div id='map'></div>
+        <div id="error" class="tippy-tooltip honeybee-theme">
+            <p><b>No API and APPLICATION_ID key inserted </b></p>
+            <p><a href="http://docs.traveltimeplatform.com/overview/getting-keys/">Sign up for an API key</a> 
+            <p>Place it in API and APPLICATION_ID variables</p>
+         </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_GOES_HERE&callback=initMap" async defer></script>
+        <script>
+            var map;
+            function initMap() {
+                var mapOpts = {
+                    center: {lat: 51.5031653, lng: -0.1123051},
+                    zoom: 13,
+                };
+                
+                map = new google.maps.Map(document.getElementById('map'), mapOpts);
+                
+                var marker0 = new google.maps.Marker({
+                    position: {lat: 51.5031653, lng: -0.1123051},
+                    map: map,
+                    title: 'London Waterloo train station',
+                    animation: google.maps.Animation.DROP
+                });
+
+                if (!google.maps.Polygon.prototype.getBounds) {
+                    google.maps.Polygon.prototype.getBounds = function() {
+                        var bounds = new google.maps.LatLngBounds();
+                        var paths = this.getPaths();
+                        var path;        
+                        for (var i = 0; i < paths.getLength(); i++) {
+                            path = paths.getAt(i);
+                            for (var ii = 0; ii < path.getLength(); ii++) {
+                                bounds.extend(path.getAt(ii));
+                            }
+                        }
+                        return bounds;
+                    }
+                }
+
+                sendGeocodingRequest(startingLocation); 
+            }
+         </script>
+</body>
